@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grading System</title>
+</head>
+
+<body>
+    <label for="eng">English</label>
+    <input type="text" id="eng">
+    <br>
+    <label for="bd">Bangla</label>
+    <input type="text" id="bd">
+    <br>
+    <br>
+    <button onclick="totalNumber()">Total</button>
+    <p id="total"></p>
+    <br>
+    <button onclick="avgNumber()">Average</button>
+    <p id="avg"></p>
+    <br>
+    <button onclick="gpaValue()">GPA</button>
+    <p id="gpa">P</p>
+
+
+    <script>
+        function totalNumber() {
+            var eng = parseInt(document.getElementById("eng").value);
+            var bd = parseInt(document.getElementById("bd").value);
+            calTotal = eng + bd;
+            document.getElementById("total").innerHTML = calTotal;
+        }
+
+        function avgNumber() {
+            var eng = parseInt(document.getElementById("eng").value);
+            var bd = parseInt(document.getElementById("bd").value);
+            calTotal1 = eng + bd;
+            var avg = calTotal1 / 2;
+            var avg = calTotal1 / 2;
+            document.getElementById("avg").innerHTML = avg;
+        }
+
+        function gpaValue() {
+            var avg = calTotal1 / 2;
+            if (avg > 80) {
+                document.getElementById("gpa").innerHTML = "A";
+            } else if (avg > 75) {
+                document.getElementById("gpa").innerHTML = "B";
+            }
+        }
+    </script>
+
+
+
+</body>
+
+</html>
